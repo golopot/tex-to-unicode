@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "version": "0.0.5",
+  "name": "TeX to Unicode",
+  "description": "Convert selected TeX to Unicode in textarea by pressing 'Alt + W'.",
+  "browser_action": {
+    "default_title": "TeX to Unicode",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "commands": {
+    "TeX-to-unicode": {
+      "suggested_key":{
+        "default": "Alt+W"
+      },
+      "description": "Convert selected TeX to unicode in textarea."
+    }
+  },
+  "icons": {
+    "48": "/assets/icon48.png",
+    "128": "/assets/icon128.png"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}

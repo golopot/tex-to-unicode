@@ -1,0 +1,28 @@
+{
+  "name": "tex-to-unicode",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd chrome && $(npm bin)/webpack -w",
+    "eslint": "$(npm bin)/eslint **.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/golopot/tex-to-unicode.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/golopot/tex-to-unicode/issues"
+  },
+  "homepage": "https://github.com/golopot/tex-to-unicode",
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "webpack": "^3.10.0"
+  },
+  "eslintIgnore": [
+    "/chrome/bundle.js"
+  ]
+}

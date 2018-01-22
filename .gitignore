@@ -1,0 +1,5 @@
+node_modules
+package-lock.json
+chrome/bundle.js
+chrome/bundle.js.map
+chrome/publish-pack.zip
