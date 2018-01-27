@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cd chrome && $(npm bin)/webpack -w",
     "eslint": "$(npm bin)/eslint **.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/golopot/tex-to-unicode",
   "devDependencies": {
     "eslint": "^4.16.0",
+    "jest": "^22.1.4",
     "webpack": "^3.10.0"
   },
   "eslintIgnore": [

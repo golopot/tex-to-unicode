@@ -27,13 +27,9 @@ h2{
 }
 .container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
 
-.container > * {
-  max-width: 590px;
-}
 .container video{
   max-width: 100%;
 }
@@ -59,4 +55,24 @@ h2{
 
 .mt-30{
   margin-top: 30px;
+}
+
+@media screen and (max-width: 480px){
+  .table.container{
+    display: block;
+    overflow-x: scroll;
+  }
+}
+
+table{
+  overflow-x: scroll;
+}
+
+td:nth-child(2n){
+  width: 20px;
+  text-align: right;
+}
+
+td:nth-child(2n+1){
+  padding-left: 20px;
 }

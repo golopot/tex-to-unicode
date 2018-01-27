@@ -5,3 +5,4 @@ zip -r publish-pack.zip \
   assets\
   background.js\
   popup.html\
+  popup.js

@@ -16,13 +16,15 @@
       </div>
     </header>
     <div style="padding: 40px 0 90px;">
-      <div class='container text-center'>
+      <div class='text-center'>
         <h1>Input Unicode mathematical symbols by TeX</h1>
         <h2>A Chrome extension</h2>
       </div>
 
-      <div class="container mt-30">
-        <video src='assets/out.webm' style='height: 174px;' autoplay loop></video>
+      <div class="mt-30 text-center">
+        <div class='container'>
+          <video src='assets/out.webm' style='height: 174px;' autoplay loop muted></video>
+        </div>
         <p style="margin-top: 0px;">
           Convert by pressing <kbd>Alt</kbd> + <kbd>w<kbd>.
         </p>
@@ -37,9 +39,12 @@
     </div>
   </section>
   <section>
-    <div class='container'>
-      <h1>Supported symbols</h1>
-      <table id='symbol-table'></table>
+    <h1 class="text-center">Supported symbols</h1>
+    <div class='table container'>
+      <table id='symbol-table'>
+        <tbody>
+        </tbody>
+      </table>
       <script src='symbol-table.js'></script>
     </div>
   </section>
