@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "version": "0.0.7",
   "name": "TeX to Unicode",
-  "description": "Convert selected TeX to Unicode in textarea by pressing 'Alt + W'.",
+  "description": "Convert selected TeX to Unicode in input boxes by pressing 'Alt + W'.",
   "browser_action": {
     "default_title": "TeX to Unicode",
     "default_popup": "popup.html"
