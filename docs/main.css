@@ -1,5 +1,6 @@
 body{
   font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
   max-width: 960px;
   margin: auto;
   padding-top: 16px;
@@ -62,6 +63,14 @@ h2{
     display: block;
     overflow-x: scroll;
   }
+}
+
+.try-here {
+  width: 400px;
+  height: 116px;
+  flex-glow: 1;
+  font-size: inherit;
+  margin: 20px 8px 30px;
 }
 
 table{

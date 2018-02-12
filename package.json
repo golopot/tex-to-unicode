@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "cd chrome && $(npm bin)/webpack -w",
     "pack": "cd chrome && $(npm bin)/webpack && sh publish-pack.sh",
+    "packlib": "$(npm bin)/webpack --output-library TexToUnicode lib/index.js docs/TexToUnicode.js",
     "eslint": "$(npm bin)/eslint **.js",
     "test": "jest"
   },

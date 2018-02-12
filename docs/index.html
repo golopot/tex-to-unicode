@@ -12,21 +12,20 @@
   <meta property="og:description"   content="Input unicode math by TeX." />
 </head>
 <body>
-  <section class='page'>
-    <header>
-      <div>TeX to Unicode</div>
-      <div>
-        <a href='https://github.com/golopot/tex-to-unicode'>
-          <img style='width: 32px;' src='assets/GitHub-Mark-64px.png' alt='Github Logo' />
-        </a>
-      </div>
-    </header>
-    <div style="padding: 40px 0 90px;">
+  <header>
+    <div>TeX to Unicode</div>
+    <div>
+      <a href='https://github.com/golopot/tex-to-unicode'>
+        <img style='width: 32px;' src='assets/GitHub-Mark-64px.png' alt='Github Logo' />
+      </a>
+    </div>
+  </header>
+  <section>
+    <div style="padding: 40px 0 60px;">
       <div class='text-center'>
-        <h1>Input Unicode mathematical symbols by TeX</h1>
+        <h1 style='display: inline-block; width: 570px;'>Input Unicode mathematical symbols by LaTeX</h1>
         <h2>A Chrome extension</h2>
       </div>
-
       <div class="mt-30 text-center">
         <div class='container'>
           <video src='assets/out.webm' style='height: 174px;' autoplay loop muted></video>
@@ -44,6 +43,17 @@
       </div>
     </div>
   </section>
+  <section class='text-center'>
+    <h1>Try it here</h1>
+    <div class='container'>
+      <textarea class='try-here'>
+\alpha \to \beta \to \gamma
+
+x \in A \subset \mathbb{R}
+</textarea>
+    </div>
+  </section>
+
   <section>
     <h1 class="text-center">Supported symbols</h1>
     <div class='table container'>
@@ -52,6 +62,26 @@
         </tbody>
       </table>
       <script src='symbol-table.js'></script>
+    </div>
+  </section>
+  <section class='text-center'>
+    <h1>More words</h1>
+    <div style='display: inline-block; width: 400px;'>
+      <p>
+        Place keyboard cursor at the LaTex symbol, and then press <kbd>Alt</kbd> + <kbd>W</kbd>.
+      </p>
+      <p>
+        Multiple convert by selecting multiple symbols.
+      </p>
+      <p>
+        Issues can be filed at <a href='https://github.com/golopot/tex-to-unicode'>Github</a>.
+      </p>
+      <p>
+        Pull requests are welcomed.
+      </p>
+      <p>
+        Licensed under MIT.
+      </p>
     </div>
   </section>
   <footer class='container mt-40'>
@@ -75,6 +105,15 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-113791632-1');
+  </script>
+  <script src='TexToUnicode.js'></script>
+  <script>
+    const textarea = document.querySelector('.try-here')
+    textarea.addEventListener('keydown', ev => {
+      if (ev.key === 'w' && ev.altKey === true) {
+        TexToUnicode.convertInputable(textarea)
+      }
+    })
   </script>
 </body>
 </html>
