@@ -1,10 +1,11 @@
 {
   "name": "tex-to-unicode",
-  "version": "0.0.1",
+  "version": "0.0.8",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "cd chrome && $(npm bin)/webpack -w",
+    "pack": "cd chrome && $(npm bin)/webpack && sh publish-pack.sh",
     "eslint": "$(npm bin)/eslint **.js",
     "test": "jest"
   },
