@@ -9,6 +9,7 @@ Extension: https://chrome.google.com/webstore/detail/tex-to-unicode/kdojinhjlhbm
 
 * Atom, Vscode plugin
 * Recognize more than nullary symbols, ex. \\mathbb{R} \\not\\in
+* Add a "try it" textarea in doc website
 
 ## License
 
