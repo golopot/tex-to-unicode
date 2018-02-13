@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>TeX to Unicode</title>
+  <title>TeX to Unicode, a Chrome extension that converts LaTeX to Unicode</title>
+  <meta name="description" content="Convert LaTeX to Unicode by pressing Alt + W in input boxes. Available in Chrome and Firefox. This is a free software." />
   <link href="main.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
@@ -11,9 +12,9 @@
   <meta property="og:title"         content="TeX to Unicode, a chrome extension." />
   <meta property="og:description"   content="Input unicode math by TeX." />
 </head>
-<body>
+<body itemscope itemtype='http://schema.org/SoftwareApplication'>
   <header>
-    <div>TeX to Unicode</div>
+    <div itemprop="name">TeX to Unicode</div>
     <div>
       <a href='https://github.com/golopot/tex-to-unicode'>
         <img style='width: 32px;' src='assets/GitHub-Mark-64px.png' alt='Github Logo' />
@@ -23,7 +24,7 @@
   <section>
     <div style="padding: 40px 0 60px;">
       <div class='text-center'>
-        <h1 style='display: inline-block; width: 570px;'>Input Unicode mathematical symbols by LaTeX</h1>
+        <h1 itemprop='headline' style='display: inline-block; max-width: 570px;'>Input Unicode mathematical symbols by LaTeX</h1>
         <h2>A Chrome extension</h2>
       </div>
       <div class="mt-30 text-center">
@@ -64,9 +65,12 @@ x \in A \subset \mathbb{R}
       <script src='symbol-table.js'></script>
     </div>
   </section>
-  <section class='text-center'>
-    <h1>More words</h1>
-    <div style='display: inline-block; width: 400px;'>
+  <section style='padding: 0 10px;'>
+    <h1 class='text-center'>More words</h1>
+    <div style='max-width: 600px; margin-left: auto; margin-right: auto; text-align: justify;'>
+      <p>The traditional way to input Unicode is intense copy paste. With TeX to Unicode you can input Unicode by it's LaTex name, and then convert the LaTex to Unicode by pressing Alt + w. The use cases includes Stack Exchange, Reddit, Wikipedia and Gmail. In sites that already accepted LaTex input through MathJax, you can still mix LaTex with Unicode to improve readability.</p>
+    </div>
+    <div class='text-center'>
       <p>
         Place keyboard cursor at the LaTex symbol, and then press <kbd>Alt</kbd> + <kbd>W</kbd>.
       </p>
@@ -74,13 +78,10 @@ x \in A \subset \mathbb{R}
         Multiple convert by selecting multiple symbols.
       </p>
       <p>
-        Issues can be filed at <a href='https://github.com/golopot/tex-to-unicode'>Github</a>.
+        Issues can be filed at <a href='https://github.com/golopot/tex-to-unicode'>Github</a>. Pull requests are welcomed.
       </p>
       <p>
-        Pull requests are welcomed.
-      </p>
-      <p>
-        Licensed under MIT.
+        This is a free software licensed under MIT.
       </p>
     </div>
   </section>
