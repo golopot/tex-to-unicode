@@ -44,16 +44,6 @@
       </div>
     </div>
   </section>
-  <section class='text-center'>
-    <h1>Try it here</h1>
-    <div class='container'>
-      <textarea class='try-here'>
-\alpha \to \beta \to \gamma
-
-x \in A \subset \mathbb{R}
-</textarea>
-    </div>
-  </section>
 
   <section>
     <h1 class="text-center">Supported symbols</h1>
@@ -85,6 +75,16 @@ x \in A \subset \mathbb{R}
       </p>
     </div>
   </section>
+  <section class='text-center'>
+    <h1>Try it here</h1>
+    <div class='container'>
+      <textarea class='try-here'>
+\alpha \to \beta \to \gamma
+
+x \in A \subset \mathbb{R}
+</textarea>
+    </div>
+  </section>
   <footer class='container mt-40'>
     <div id="fb-root">
       <div class="fb-like" data-href="https://golopot.github.io/tex-to-unicode/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
@@ -107,14 +107,21 @@ x \in A \subset \mathbb{R}
     gtag('js', new Date());
     gtag('config', 'UA-113791632-1');
   </script>
-  <script src='TexToUnicode.js'></script>
   <script>
-    const textarea = document.querySelector('.try-here')
-    textarea.addEventListener('keydown', ev => {
-      if (ev.key === 'w' && ev.altKey === true) {
-        TexToUnicode.convertInputable(textarea)
-      }
-    })
+  {
+    const script = document.createElement('script')
+    script.async = true
+    script.onload = () => {
+      const textarea = document.querySelector('.try-here')
+      textarea.addEventListener('keydown', ev => {
+        if (ev.key === 'w' && ev.altKey === true) {
+          TexToUnicode.convertInputable(textarea)
+        }
+      })
+    }
+    script.src = 'TexToUnicode.js'
+    document.body.appendChild(script)
+  }
   </script>
 </body>
 </html>
