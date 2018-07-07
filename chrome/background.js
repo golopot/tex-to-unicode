@@ -1,5 +1,7 @@
-chrome.commands.onCommand.addListener((command) => {
-  if (command === 'TeX-to-unicode'){
-    chrome.tabs.executeScript(null, {file: '/bundle.js'})
+chrome.commands.onCommand.addListener(command => {
+  if (command === 'convert') {
+    chrome.tabs.executeScript(null, { file: '/main.bundle.js' }, result =>
+      console.log(result)
+    )
   }
 })

@@ -1,8 +1,9 @@
 {
   "manifest_version": 2,
-  "version": "0.0.8",
+  "version": "1.0.0",
   "name": "TeX to Unicode",
-  "description": "Convert LaTeX to Unicode by pressing 'Alt + W' in input boxes.",
+  "description":
+    "Convert LaTeX to Unicode by pressing 'Alt + W' in input boxes.",
   "browser_action": {
     "default_title": "TeX to Unicode",
     "default_popup": "popup.html"
@@ -11,8 +12,8 @@
     "scripts": ["background.js"]
   },
   "commands": {
-    "TeX-to-unicode": {
-      "suggested_key":{
+    "convert": {
+      "suggested_key": {
         "default": "Alt+W"
       },
       "description": "Convert selected TeX to unicode in textarea."
@@ -22,7 +23,5 @@
     "48": "/assets/icon48.png",
     "128": "/assets/icon128.png"
   },
-  "permissions": [
-    "activeTab"
-  ]
+  "permissions": ["activeTab"]
 }

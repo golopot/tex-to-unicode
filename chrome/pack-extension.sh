@@ -1,6 +1,6 @@
 #/bin/sh
-rm -f publish-pack.zip
-zip -r publish-pack.zip \
+rm -f pack-extension.zip
+zip -r pack-extension.zip \
   manifest.json \
   bundle.js \
   assets\
