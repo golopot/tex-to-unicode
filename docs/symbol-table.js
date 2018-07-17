@@ -164,6 +164,8 @@
     \\rightharpoonup	⇀	\\rightharpoondown	⇁
 
     # Analysis
+    \\times ×
+    \\div ÷
     \\infty	∞
     \\nabla	∇
     \\partial	∂
