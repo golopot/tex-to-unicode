@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Popup</title>
@@ -5,12 +6,30 @@
       body {
         width: 400px;
         text-align: center;
+        font-size: 14px;
+        margin: 0;
+        padding: 8px 6px;
+        box-sizing: border-box;
       }
       a {
         color: blue;
       }
-      h1{
-        font-size: 1.5em;
+      h1 {
+        font-size: 20px;
+        margin: 8px 0;
+      }
+      fieldset {
+        border: 0;
+      }
+      fieldset input {
+        position: relative;
+        top: 2px;
+      }
+      footer {
+        font-size: 12px;
+      }
+      footer a + a {
+        margin-left : 4px;
       }
     </style>
   </head>
@@ -19,9 +38,19 @@
     <p>Move caret to the TeX symbol and press <kbd>Alt + w </kbd>to convert.</p>
     <img src='/assets/popup-howto.gif'/>
     <p>Multiple conversion can be done by selecting multiple symbols.</p>
-    <p>
+
+    <h1>Options</h1>
+    <fieldset class='options'>
+      <input type='checkbox' id='option-subscripts' name='subscripts'>
+      <label for='option-subscripts'>Convert subscripts and superscripts</label>
+    </fieldset>
+
+    <hr>
+    <footer>
       <a href='https://golopot.github.io/tex-to-unicode/'>Website</a>
-    </p>
+      <a href='https://github.com/golopot/tex-to-unicode/'>Github</a>
+    </footer>
+
     <script src='popup.js'></script>
   </body>
 </html>

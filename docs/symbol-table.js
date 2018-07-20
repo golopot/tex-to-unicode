@@ -164,8 +164,8 @@
     \\rightharpoonup	⇀	\\rightharpoondown	⇁
 
     # Analysis
-    \\times ×
-    \\div ÷
+    \\times	×
+    \\div	÷
     \\infty	∞
     \\nabla	∇
     \\partial	∂
@@ -191,7 +191,7 @@
     \\lceil	⌈
     \\rceil	⌉
 
-    # Blackboard Bold
+    # Blackboard Bold, Fraktur
     \\mathbb{a}	𝕒	\\mathbb{A}	𝔸
     \\mathbb{b}	𝕓	\\mathbb{B}	𝔹
     \\mathbb{c}	𝕔	\\mathbb{C}	ℂ
@@ -254,6 +254,49 @@
     \\mathfrak{y}	𝔶	\\mathfrak{Y}	𝔜
     \\mathfrak{z}	𝔷	\\mathfrak{Z}	ℨ
 
+    # Subscripts and superscripts
+    _0	₀	^0	⁰
+    _1	₁	^1	¹
+    _2	₂	^2	²
+    _3	₃	^3	³
+    _4	₄	^4	⁴
+    _5	₅	^5	⁵
+    _6	₆	^6	⁶
+    _7	₇	^7	⁷
+    _8	₈	^8	⁸
+    _9	₉	^9	⁹
+    _+	⁺	^+	⁺
+    _-	⁻	^-	⁻
+    _(	₍	^(	⁽
+    _)	₎	^)	⁾
+
+    _a	ₐ	^a	ᵃ
+    ^b	ᵇ
+    ^c	ᶜ
+    ^d	ᵈ
+    _e	ₑ	^e	ᵉ
+    ^f	ᶠ
+    ^g	ᵍ
+    _h	ₕ	^h	ʰ
+    _i	ᵢ	^i	^i	ⁱ
+    _j	ⱼ	^j	ʲ
+    _k	ₖ	^k	ᵏ
+    _l	ₗ	^l	ˡ
+    _m	ₘ	^m	ᵐ
+    _n	ₙ	^n	ⁿ
+    _o	ₒ	^o	ᵒ
+    _p	ₚ	^p	ᵖ
+
+    _r	ᵣ	^r	ʳ
+    _s	ₛ	^s	ˢ
+    _t	ₜ	^t	ᵗ
+    _u	ᵤ	^u	ᵘ
+    _v	ᵥ	^v	ᵛ
+    ^w	ʷ
+    _x	ₓ	^x	ˣ
+    ^y	ʸ
+    ^z	ᶻ
+
     # Misc
     \\mp	∓
     \\dotplus	∔
@@ -277,7 +320,6 @@
     \\flat	♭
     \\natural	♮
     \\sharp	♯
-`
-
+  `
   main()
 })()

@@ -1,6 +1,6 @@
 {
   "name": "tex-to-unicode",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -26,6 +26,13 @@
     "webpack": "^4.15.1",
     "webpack-cli": "^3.0.8"
   },
-  "eslintIgnore": ["/chrome/main.bundle.js"],
-  "engines": { "node": ">=10.0.0" }
+  "eslintIgnore": [
+    "/chrome/main.bundle.js"
+  ],
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "dependencies": {
+    "parsimmon": "^1.12.0"
+  }
 }

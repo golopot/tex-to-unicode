@@ -23,6 +23,16 @@ describe('convertText', () => {
     expect(convertText('\\not\\equiv', 10, 10))
       .toEqual({text: '≢', cursor: 1})
   })
+
+  test('Convert (Sub|Super)scripts', () => {
+    expect(convertText('x_1^{abc}', 0, 9, {subscripts: true}))
+      .toEqual({text: 'x₁ᵃᵇᶜ', cursor: 5,})
+  })
+
+  test('Does not convert macro subscripts', () => {
+    expect(convertText('x_{\\alpha}', 0, 10, {subscripts: true}))
+      .toMatchObject({text: 'x_{\\alpha}'})
+  })
 })
 
 describe('Tree algorithms', () => {

@@ -5,3 +5,14 @@ chrome.commands.onCommand.addListener(command => {
     )
   }
 })
+
+chrome.storage.local.get(['options'], ({options = {}}) => {
+
+  const opt = {
+    subscripts: typeof options.subscripts === 'boolean'
+      ? options.subscripts
+      : true
+  }
+
+  chrome.storage.local.set({options: opt})
+})

@@ -1,5 +1,4 @@
 import {convertInputable} from '../lib/index'
-
-(function main(){
-  convertInputable(document.activeElement)
-})()
+chrome.storage.local.get(['options'], ({options = {}}) => {
+  convertInputable(document.activeElement, options)
+})
