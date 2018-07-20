@@ -14,7 +14,7 @@ describe('convertText', () => {
       .toEqual({text: '\\frac{α}{β}', cursor: 11})
   })
 
-  test('Convert \\mathbb', () =>{
+  test('Convert \\mathbb', () => {
     expect(convertText('a \\in \\mathbb{R}', 0, 16))
       .toEqual({text: 'a ∈ ℝ', cursor: 5})
   })
@@ -26,7 +26,7 @@ describe('convertText', () => {
 
   test('Convert (Sub|Super)scripts', () => {
     expect(convertText('x_1^{abc}', 0, 9, {subscripts: true}))
-      .toEqual({text: 'x₁ᵃᵇᶜ', cursor: 5,})
+      .toEqual({text: 'x₁ᵃᵇᶜ', cursor: 5})
   })
 
   test('Does not convert macro subscripts', () => {

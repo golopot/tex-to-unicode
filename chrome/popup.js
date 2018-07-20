@@ -12,7 +12,7 @@ chrome.storage.local.get(['options'], ({options = {}}) => {
 
 document
   .querySelector('body')
-  .addEventListener('click', event => {
+  .addEventListener('click', (event) => {
     if (event.target.tagName === 'A'){
       chrome.tabs.create({url: event.target.href})
       return false
@@ -34,6 +34,6 @@ function getOptions() {
     .checked
 
   return {
-    subscripts
+    subscripts,
   }
 }
