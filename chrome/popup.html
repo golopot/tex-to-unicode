@@ -4,7 +4,7 @@
     <title>Popup</title>
     <style>
       body {
-        width: 400px;
+        width: 370px;
         text-align: center;
         font-size: 14px;
         margin: 0;
@@ -20,10 +20,18 @@
       }
       fieldset {
         border: 0;
+        text-align: left;
       }
       fieldset input {
         position: relative;
         top: 2px;
+        margin-left: 0px;
+      }
+      .options .shortcut {
+        padding-left: 6px;
+      }
+      .options > div + div{
+        margin-top: 4px;
       }
       footer {
         font-size: 12px;
@@ -37,12 +45,17 @@
     <h1>TeX to Unicode</h1>
     <p>Move caret to the TeX symbol and press <kbd>Alt + w </kbd>to convert.</p>
     <img src="/assets/popup-howto.gif"/>
-    <p>Multiple conversion can be done by selecting multiple symbols.</p>
+    <p>Select all if you want to convert all.</p>
 
     <h1>Options</h1>
     <fieldset class="options">
-      <input type="checkbox" id="option-subscripts" name="subscripts">
-      <label for="option-subscripts">Convert subscripts and superscripts</label>
+      <div>
+        <span>Shortcut: <a href="chrome://extensions/shortcuts" class="shortcut">sss</a></span>
+      </div>
+      <div>
+        <input type="checkbox" id="option-subscripts" name="subscripts">
+        <label for="option-subscripts">Convert subscripts and superscripts</label>
+      </div>
     </fieldset>
 
     <hr>

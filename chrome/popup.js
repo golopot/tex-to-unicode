@@ -1,3 +1,5 @@
+chrome.commands.getAll(console.log)
+
 chrome.storage.local.get(['options'], ({options = {}}) => {
 
   Array.from(document.querySelectorAll('.options input'))
@@ -7,6 +9,13 @@ chrome.storage.local.get(['options'], ({options = {}}) => {
       }
     })
 
+})
+
+chrome.commands.getAll((commands) => {
+  document
+    .querySelector('.options .shortcut')
+    .innerHTML
+     = commands[1].shortcut || 'unset'
 })
 
 
