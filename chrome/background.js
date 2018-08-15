@@ -11,8 +11,12 @@ chrome.storage.local.get(['options'], ({options = {}}) => {
   const opt = {
     subscripts: typeof options.subscripts === 'boolean'
       ? options.subscripts
-      : true,
+      : false,
   }
 
   chrome.storage.local.set({options: opt})
+})
+
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.storage.local.set({options: {subscripts: false}})
 })
