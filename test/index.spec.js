@@ -1,6 +1,7 @@
 /* eslint-env jest */
 
 const {convertText, convertInputable} = require('../lib/index')
+const parser = require('../lib/parser')
 const tree = require('../lib/tree')
 
 describe('convertText', () => {
@@ -24,14 +25,31 @@ describe('convertText', () => {
       .toEqual({text: '≢', cursor: 1})
   })
 
-  test('Convert (Sub|Super)scripts', () => {
+  test('Convert x_1^{abc} (option subscript on)', () => {
     expect(convertText('x_1^{abc}', 0, 9, {subscripts: true}))
       .toEqual({text: 'x₁ᵃᵇᶜ', cursor: 5})
   })
 
-  test('Does not convert macro subscripts', () => {
-    expect(convertText('x_{\\alpha}', 0, 10, {subscripts: true}))
-      .toMatchObject({text: 'x_{\\alpha}'})
+  test('Convert x_1^{abc} (option subscript off)', () => {
+    expect(convertText('x_1^{abc}', 0, 9, {subscripts: false}))
+      .toMatchObject({text: 'x_1^{abc}'})
+  })
+
+  test('Convert x_\\alpha (option subscript on)', () => {
+    expect(convertText('x_\\alpha', 0, 8, {subscripts: true}))
+      .toMatchObject({text: 'x_α'})
+  })
+
+  test('Convert x_\\alpha (option subscript off)', () => {
+    expect(convertText('x_\\alpha', 0, 8, {subscripts: false}))
+      .toMatchObject({text: 'x_α'})
+  })
+})
+
+describe('Parser', () => {
+  test('Should successfully parse \\\\^^__', () => {
+    expect(parser.parse('\\\\^^__').status)
+      .toEqual(true)
   })
 })
 
