@@ -1,6 +1,5 @@
 node_modules
 package-lock.json
-chrome/main.bundle.js
-chrome/main.bundle.js.map
-chrome/pack-extension.zip
+chrome/dist
+chrome/dist.zip
 coverage
