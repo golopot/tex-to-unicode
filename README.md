@@ -14,9 +14,9 @@ Firefox Extension: https://addons.mozilla.org/en-US/firefox/addon/tex-to-unicode
 
 ## Develop
 
-`npm run dev`: Run webpack in watching mode.
+`npm run dev`: Run webpack in watch mode.
 
-`npm run pack-extension`: Pack files to a zip file for publishing.
+`npm run pack-extension`: Create a zip file for publishing.
 
 ## License
 
