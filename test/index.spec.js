@@ -109,7 +109,8 @@ describe('Tree algorithms', () => {
 })
 
 describe('DOM test', () => {
-  test('convert text in textarea', () => {
+  // Not testable because jsdom didn't implement document.execCommand
+  test.skip('convert text in textarea', () => {
     document.body.innerHTML = `
       <textarea>\\alpha \\to \\beta</textarea>
     `
