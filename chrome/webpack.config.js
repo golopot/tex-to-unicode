@@ -1,4 +1,4 @@
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './main.js',
@@ -7,8 +7,6 @@ module.exports = {
     path: `${__dirname}/dist`,
   },
   devtool: 'source-map',
-  plugins: [
-    new CopyWebpackPlugin(['public']),
-  ],
+  plugins: [new CopyWebpackPlugin(['public'])],
   mode: 'production',
-}
+};

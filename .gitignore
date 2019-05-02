@@ -3,3 +3,4 @@ package-lock.json
 chrome/dist
 chrome/dist.zip
 coverage
+.vscode

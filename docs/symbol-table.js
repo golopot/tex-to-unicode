@@ -8,8 +8,8 @@
     str = str.replace(/^[\n\t\s]*/, '').replace(/[\n\t\s]*$/, '\n')
     let res = ''
     const lines = str.split(/\n+/)
-    for (let line of lines){
-      let tds = line.trim().split(/\t+/).map(x => `<td>${x}</td>`).join('')
+    for (const line of lines){
+      const tds = line.trim().split(/\t+/).map(x => `<td>${x}</td>`).join('')
       res += `<tr>${tds}</tr>\n`
     }
     return res
