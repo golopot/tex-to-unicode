@@ -1,6 +1,7 @@
 ## TeX to Unicode
 
 [![Build Status](https://travis-ci.org/golopot/tex-to-unicode.svg?branch=master)](https://travis-ci.org/golopot/tex-to-unicode)
+[![codecov](https://codecov.io/gh/golopot/tex-to-unicode/branch/master/graph/badge.svg)](https://codecov.io/gh/golopot/tex-to-unicode)
 
 Convert LaTeX to Unicode by pressing "Alt + W" in input and textarea.
 
