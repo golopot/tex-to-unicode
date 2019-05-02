@@ -2,24 +2,22 @@
   "name": "tex-to-unicode",
   "version": "1.2.1",
   "description": "",
-  "main": "index.js",
+  "license": "MIT",
+  "repository": "golopot/tex-to-unicode",
+  "author": {
+    "name": "golopot",
+    "email": "golopot@gmail.com"
+  },
   "scripts": {
     "dev": "cd chrome && webpack -w",
     "pack-extension": "cd chrome && webpack && cd dist && zip -rFS ../dist.zip *",
     "pack-lib": "webpack --output-library TexToUnicode lib/index.js docs/TexToUnicode.js",
     "lint": "eslint .",
-    "test": "jest"
+    "test": "jest --coverage"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/golopot/tex-to-unicode.git"
+  "dependencies": {
+    "parsimmon": "^1.12.0"
   },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/golopot/tex-to-unicode/issues"
-  },
-  "homepage": "https://github.com/golopot/tex-to-unicode",
   "devDependencies": {
     "copy-webpack-plugin": "^4.6.0",
     "eslint": "^5.0.1",
@@ -27,13 +25,7 @@
     "webpack": "^4.15.1",
     "webpack-cli": "^3.0.8"
   },
-  "eslintIgnore": [
-    "/chrome/dist"
-  ],
   "engines": {
     "node": ">=10.0.0"
-  },
-  "dependencies": {
-    "parsimmon": "^1.12.0"
   }
 }
