@@ -109,13 +109,15 @@ describe('Tree algorithms', () => {
 })
 
 describe('DOM test', () => {
-  // Not testable because jsdom didn't implement document.execCommand
-  test.skip('convert text in textarea', () => {
+  test('Convert text in textarea', () => {
     document.body.innerHTML = `
       <textarea>\\alpha \\to \\beta</textarea>
     `
     const textarea = document.querySelector('textarea')
     textarea.select()
+    document.execCommand = function fakeExecCommand(_, __, text) {
+      textarea.value = text
+    }
     convertInputable(textarea)
     expect(textarea.value)
       .toBe('α → β')
