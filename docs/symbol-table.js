@@ -25,6 +25,7 @@
     \\zeta	ζ	\\Zeta	Ζ
     \\eta	η	\\Eta	Η
     \\theta	θ	\\Theta	Θ
+    \\iota	ι	\\Iota	I
     \\kappa	κ	\\Kappa	Κ
     \\lambda	λ	\\Lambda	Λ
     \\mu	μ	\\Mu	Μ
