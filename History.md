@@ -1,3 +1,7 @@
+1.3.0 / 2019-06-13
+===================
+  * Add iota (#9)(Quelklef)
+
 1.2.1 / 2018-01-07
 ===================
   * Make convert in textarea ctrl-z-undoable

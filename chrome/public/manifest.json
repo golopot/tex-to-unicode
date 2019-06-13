@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "version": "1.2.1",
+  "version": "1.3.0",
   "name": "TeX to Unicode",
   "description":
     "Convert LaTeX to Unicode by pressing 'Alt + W' in input boxes.",
