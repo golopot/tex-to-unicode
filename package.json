@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "codecov": "^3.3.0",
-    "copy-webpack-plugin": "^4.6.0",
+    "copy-webpack-plugin": "^5.0.4",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.2.0",
     "jest": "^24.8.0",
