@@ -2,8 +2,7 @@
   "manifest_version": 2,
   "version": "1.3.0",
   "name": "TeX to Unicode",
-  "description":
-    "Convert LaTeX to Unicode by pressing 'Alt + W' in input boxes.",
+  "description": "Convert LaTeX to Unicode by pressing 'Alt + W' in input boxes.",
   "browser_action": {
     "default_title": "TeX to Unicode",
     "default_popup": "popup.html"
@@ -23,8 +22,5 @@
     "48": "/assets/icon48.png",
     "128": "/assets/icon128.png"
   },
-  "permissions": [
-    "activeTab",
-    "storage"
-  ]
+  "permissions": ["activeTab", "storage"]
 }

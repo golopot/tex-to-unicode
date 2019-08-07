@@ -12,7 +12,8 @@
     "dev": "cd chrome && webpack -w",
     "pack-extension": "cd chrome && webpack && cd dist && zip -rFS ../dist.zip *",
     "pack-lib": "webpack --output-library TexToUnicode lib/index.js docs/TexToUnicode.js",
-    "lint": "eslint . && prettier --check \"lib/*.js\" \"chrome/**/*.js\" \"test/*.js\"",
+    "prettier": "prettier --check \"**/*.{js,json,css,html}\"",
+    "lint": "eslint . && npm run prettier",
     "test": "jest --coverage"
   },
   "dependencies": {
