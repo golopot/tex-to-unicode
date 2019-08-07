@@ -1,6 +1,6 @@
 node_modules
 package-lock.json
-chrome/dist
-chrome/dist.zip
+extension/dist
+extension/dist.zip
 coverage
 .vscode
