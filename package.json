@@ -20,7 +20,7 @@
     "parsimmon": "^1.12.0"
   },
   "devDependencies": {
-    "codecov": "^3.3.0",
+    "codecov": "^3.6.5",
     "copy-webpack-plugin": "^5.0.4",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^4.2.0",
