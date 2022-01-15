@@ -1,6 +1,6 @@
 module.exports = {
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2021,
     sourceType: 'module',
   },
   env: {
@@ -13,6 +13,12 @@ module.exports = {
   extends: ['eslint:recommended'],
   rules: {
     eqeqeq: 2,
+    'no-unused-vars': [
+      2,
+      {
+        argsIgnorePattern: '^_+$',
+      },
+    ],
     'no-cond-assign': 0,
     'no-console': 0,
     'no-unused-expressions': 2,

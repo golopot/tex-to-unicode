@@ -52,6 +52,36 @@ describe('convertText', () => {
       text: 'x_α',
     });
   });
+
+  test('Convert things', () => {
+    expect(convertText('_{a!}', 0, 8, {subscripts: true})).toMatchObject({
+      text: '_{a!}',
+    });
+  });
+
+  test('Convert things 2', () => {
+    expect(
+      convertText('\\mathbb{0} \\mathfrak{a}', 0, 30, {subscripts: true})
+    ).toMatchObject({
+      text: '𝟘 𝔞',
+    });
+  });
+
+  test('Convert things 3', () => {
+    expect(
+      convertText('\\mathbb{1 2}', 0, 30, {subscripts: true})
+    ).toMatchObject({
+      text: '\\mathbb{1 2}',
+    });
+  });
+
+  test('Convert things 4', () => {
+    expect(
+      convertText('\\mathbb\\alpha', 0, 30, {subscripts: true})
+    ).toMatchObject({
+      text: '\\mathbb\\alpha',
+    });
+  });
 });
 
 describe('Parser', () => {

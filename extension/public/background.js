@@ -1,5 +1,6 @@
 chrome.commands.onCommand.addListener((command) => {
   if (command === 'convert') {
+    // @ts-ignore
     chrome.tabs.executeScript(null, {file: '/main.bundle.js'}, (result) =>
       console.log(result)
     );
