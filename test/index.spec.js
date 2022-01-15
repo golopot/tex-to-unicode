@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 /* eslint-env jest */
 
 const {convertText, convertInputable} = require('../lib/index');
