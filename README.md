@@ -21,4 +21,4 @@ Firefox Extension: https://addons.mozilla.org/en-US/firefox/addon/tex-to-unicode
 
 ## License
 
-  [MIT](LICENSE)
+[MIT](LICENSE)

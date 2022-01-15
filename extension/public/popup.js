@@ -1,19 +1,19 @@
 chrome.commands.getAll(console.log);
 
 chrome.storage.local.get(['options'], ({options = {}}) => {
-  Array.from(document.querySelectorAll('.options input')).map(input => {
+  Array.from(document.querySelectorAll('.options input')).map((input) => {
     if (input.name === 'subscripts') {
       input.checked = Boolean(options.subscripts);
     }
   });
 });
 
-chrome.commands.getAll(commands => {
+chrome.commands.getAll((commands) => {
   document.querySelector('.options .shortcut').innerHTML =
     commands[1].shortcut || 'unset';
 });
 
-document.querySelector('body').addEventListener('click', event => {
+document.querySelector('body').addEventListener('click', (event) => {
   if (event.target.tagName === 'A') {
     chrome.tabs.create({url: event.target.href});
     return false;
@@ -27,8 +27,9 @@ document.querySelector('.options').addEventListener('input', () => {
 });
 
 function getOptions() {
-  const subscripts = document.querySelector('.options [name=subscripts]')
-    .checked;
+  const subscripts = document.querySelector(
+    '.options [name=subscripts]'
+  ).checked;
 
   return {
     subscripts,

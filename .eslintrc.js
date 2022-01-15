@@ -10,7 +10,7 @@ module.exports = {
     node: true,
     webextensions: true,
   },
-  extends: ['eslint:recommended', 'prettier'],
+  extends: ['eslint:recommended'],
   rules: {
     eqeqeq: 2,
     'no-cond-assign': 0,

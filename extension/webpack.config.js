@@ -7,6 +7,10 @@ module.exports = {
     path: `${__dirname}/dist`,
   },
   devtool: 'source-map',
-  plugins: [new CopyWebpackPlugin(['public'])],
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [{from: 'public'}],
+    }),
+  ],
   mode: 'production',
 };

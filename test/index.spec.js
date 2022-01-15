@@ -61,7 +61,7 @@ describe('Parser', () => {
 });
 
 describe('Tree algorithms', () => {
-  const Node = function() {
+  const Node = function () {
     const res = {childNodes: Array.from(arguments)};
     for (const node of arguments) {
       node.parentNode = res;
