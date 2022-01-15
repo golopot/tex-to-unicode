@@ -4,84 +4,88 @@ const {convertText, convertInputable} = require('../lib/index');
 const parser = require('../lib/parser');
 const tree = require('../lib/tree');
 
+const testCases = [
+  {
+    tex: 'a \\alpha, b \\beta',
+    out: 'a α, b \\beta',
+    selection: [0, 4],
+    cursor: 3,
+  },
+  {
+    tex: '\\frac{\\alpha}{\\beta}',
+    out: '\\frac{α}{β}',
+    selection: [0, 20],
+    cursor: 11,
+  },
+  {
+    tex: 'a \\in \\mathbb{R}',
+    out: 'a ∈ ℝ',
+    selection: [0, 16],
+    cursor: 5,
+  },
+  {
+    tex: '\\not\\equiv',
+    out: '≢',
+    selection: [10, 10],
+    cursor: 1,
+  },
+  {
+    tex: 'x_1^{abc}',
+    out: 'x₁ᵃᵇᶜ',
+    selection: [0, 9],
+    cursor: 5,
+    options: {
+      subscripts: true,
+    },
+  },
+  {
+    tex: 'x_1^{abc}',
+    out: 'x_1^{abc}',
+    options: {
+      subscripts: false,
+    },
+  },
+  {
+    tex: 'x_\\alpha',
+    out: 'x_α',
+  },
+  {
+    tex: 'x_\\alpha',
+    out: 'x_α',
+  },
+  {
+    tex: '_{a!}',
+    out: '_{a!}',
+  },
+  {
+    tex: '\\mathbb{0} \\mathfrak{a}',
+    out: '𝟘 𝔞',
+  },
+  {
+    tex: '\\mathbb{1 2}',
+    out: '\\mathbb{1 2}',
+  },
+  {
+    tex: '\\mathbb\\alpha',
+    out: '\\mathbb\\alpha',
+  },
+];
+
 describe('convertText', () => {
-  test('Only convert selected parts', () => {
-    const result = convertText('a \\alpha, b \\beta', 0, 4);
-    expect(result).toEqual({text: 'a α, b \\beta', cursor: 3});
-  });
-
-  test('Plays well with non-convertible macros', () => {
-    expect(convertText('\\frac{\\alpha}{\\beta}', 0, 20)).toEqual({
-      text: '\\frac{α}{β}',
-      cursor: 11,
+  for (const t of testCases) {
+    test(`convert ${t.tex}`, () => {
+      const r = convertText(
+        t.tex,
+        t.selection?.[0] ?? 0,
+        t.selection?.[1] ?? t.tex.length,
+        t.options
+      );
+      expect({out: r.text, cursor: r.cursor}).toMatchObject({
+        out: t.out,
+        ...(t.cursor !== undefined ? {cursor: t.cursor} : {}),
+      });
     });
-  });
-
-  test('Convert \\mathbb', () => {
-    expect(convertText('a \\in \\mathbb{R}', 0, 16)).toEqual({
-      text: 'a ∈ ℝ',
-      cursor: 5,
-    });
-  });
-
-  test('Convert \\not', () => {
-    expect(convertText('\\not\\equiv', 10, 10)).toEqual({text: '≢', cursor: 1});
-  });
-
-  test('Convert x_1^{abc} (option subscript on)', () => {
-    expect(convertText('x_1^{abc}', 0, 9, {subscripts: true})).toEqual({
-      text: 'x₁ᵃᵇᶜ',
-      cursor: 5,
-    });
-  });
-
-  test('Convert x_1^{abc} (option subscript off)', () => {
-    expect(convertText('x_1^{abc}', 0, 9, {subscripts: false})).toMatchObject({
-      text: 'x_1^{abc}',
-    });
-  });
-
-  test('Convert x_\\alpha (option subscript on)', () => {
-    expect(convertText('x_\\alpha', 0, 8, {subscripts: true})).toMatchObject({
-      text: 'x_α',
-    });
-  });
-
-  test('Convert x_\\alpha (option subscript off)', () => {
-    expect(convertText('x_\\alpha', 0, 8, {subscripts: false})).toMatchObject({
-      text: 'x_α',
-    });
-  });
-
-  test('Convert things', () => {
-    expect(convertText('_{a!}', 0, 8, {subscripts: true})).toMatchObject({
-      text: '_{a!}',
-    });
-  });
-
-  test('Convert things 2', () => {
-    expect(
-      convertText('\\mathbb{0} \\mathfrak{a}', 0, 30, {subscripts: true})
-    ).toMatchObject({
-      text: '𝟘 𝔞',
-    });
-  });
-
-  test('Convert things 3', () => {
-    expect(
-      convertText('\\mathbb{1 2}', 0, 30, {subscripts: true})
-    ).toMatchObject({
-      text: '\\mathbb{1 2}',
-    });
-  });
-
-  test('Convert things 4', () => {
-    expect(
-      convertText('\\mathbb\\alpha', 0, 30, {subscripts: true})
-    ).toMatchObject({
-      text: '\\mathbb\\alpha',
-    });
-  });
+  }
 });
 
 describe('Parser', () => {
