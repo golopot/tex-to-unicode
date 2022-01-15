@@ -1,4 +1,4 @@
-chrome.commands.getAll(console.log);
+// @ts-nocheck
 
 chrome.storage.local.get(['options'], ({options = {}}) => {
   Array.from(document.querySelectorAll('.options input')).map((input) => {
