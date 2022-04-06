@@ -3,9 +3,9 @@
  */
 /* eslint-env jest */
 
-const {convertText, convertInputable} = require('../lib/index');
-const parser = require('../lib/parser');
-const tree = require('../lib/tree');
+import {convertText, convertInputable} from '../lib/index.js';
+import parser from '../lib/parser.js';
+import * as tree from '../lib/tree.js';
 
 const testCases = [
   {
