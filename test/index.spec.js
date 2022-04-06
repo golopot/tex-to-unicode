@@ -65,6 +65,10 @@ const testCases = [
     out: '𝟘 𝔞',
   },
   {
+    tex: '\\mathcal{T}',
+    out: '𝒯',
+  },
+  {
     tex: '\\mathbb{1 2}',
     out: '\\mathbb{1 2}',
   },
