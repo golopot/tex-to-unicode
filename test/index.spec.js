@@ -72,6 +72,10 @@ const testCases = [
     tex: '\\mathbb\\alpha',
     out: '\\mathbb\\alpha',
   },
+  {
+    tex: '\\|',
+    out: '‖',
+  },
 ];
 
 describe('convertText', () => {
