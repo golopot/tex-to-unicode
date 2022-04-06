@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "version": "1.5.0",
+  "version": "1.6.0",
   "name": "TeX to Unicode",
   "description": "Convert LaTeX to Unicode by pressing 'Alt + W' ('Control + W' for Mac) in browser inputs.",
   "browser_action": {
