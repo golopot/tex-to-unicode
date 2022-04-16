@@ -101,7 +101,7 @@ describe('convertText', () => {
 
 describe('Parser', () => {
   test('Should successfully parse \\\\^^__', () => {
-    expect(parser.parse('\\\\^^__').status).toEqual(true);
+    expect(parser.parse('\\\\^^__').type).toEqual('ParseOK');
   });
 });
 
