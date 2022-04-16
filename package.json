@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "cd extension && webpack -w",
     "pack-extension": "cd extension && webpack && cd dist && zip -rFS ../dist.zip *",
-    "pack-lib": "webpack --output-library TexToUnicode lib/index.js docs/TexToUnicode.js",
+    "pack-docs": "webpack -c build/webpack.configs.docs.js",
     "prettier": "prettier --check .",
     "lint": "eslint .",
     "tsc": "tsc",
