@@ -9,8 +9,9 @@ chrome.storage.local.get(['options'], ({options = {}}) => {
 });
 
 chrome.commands.getAll((commands) => {
-  document.querySelector('.options .shortcut').innerHTML =
-    commands[1].shortcut || 'unset';
+  for (const e of Array.from(document.querySelectorAll('.shortcut'))) {
+    e.innerHTML = commands[1].shortcut || 'unset';
+  }
 });
 
 document.querySelector('body').addEventListener('click', (event) => {

@@ -1,14 +1,14 @@
 {
-  "manifest_version": 2,
-  "version": "1.6.1",
+  "manifest_version": 3,
+  "version": "1.6.3",
   "name": "TeX to Unicode",
   "description": "Convert LaTeX to Unicode by pressing 'Alt + W' ('Control + W' for Mac) in browser inputs.",
-  "browser_action": {
+  "action": {
     "default_title": "TeX to Unicode",
     "default_popup": "popup.html"
   },
   "background": {
-    "scripts": ["background.js"]
+    "service_worker": "background.js"
   },
   "commands": {
     "convert": {
@@ -23,5 +23,5 @@
     "48": "/assets/icon48.png",
     "128": "/assets/icon128.png"
   },
-  "permissions": ["activeTab", "storage"]
+  "permissions": ["activeTab", "storage", "scripting"]
 }

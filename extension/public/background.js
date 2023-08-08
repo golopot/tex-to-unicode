@@ -1,9 +1,13 @@
-chrome.commands.onCommand.addListener((command) => {
+chrome.commands.onCommand.addListener(async (command) => {
   if (command === 'convert') {
-    // @ts-ignore
-    chrome.tabs.executeScript(null, {file: '/main.bundle.js'}, (result) =>
-      console.log(result)
-    );
+    const [tab] = await chrome.tabs.query({active: true, currentWindow: true});
+    if (!tab.id) {
+      return;
+    }
+    chrome.scripting.executeScript({
+      target: {tabId: tab.id},
+      files: ['/main.bundle.js'],
+    });
   }
 });
 
